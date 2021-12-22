@@ -255,7 +255,7 @@ mac_toolchain("ios_clang_arm_sim") {
   }
   ld = cxx
   is_clang = true
-  sysroot_flags = "-isysroot $ios_simulator_sdk_path -mios-simulator-version-min=$ios_deployment_target"
+  sysroot_flags = "-isysroot $ios_simulator_sdk_path -mappletvsimulator-version-min=$ios_deployment_target"
 }
 
 # Toolchain used for iOS simulator targets (x64).
@@ -268,7 +268,7 @@ mac_toolchain("ios_clang_x64_sim") {
   cxx = "$prefix/clang++"
   ld = cxx
   is_clang = true
-  sysroot_flags = "-isysroot $ios_simulator_sdk_path -mios-simulator-version-min=$ios_deployment_target"
+  sysroot_flags = "-isysroot $ios_simulator_sdk_path -mappletvsimulator-version-min=$ios_deployment_target"
 }
 
 # Toolchain used for Mac X64 host targets.
@@ -287,7 +287,7 @@ mac_toolchain("clang_x64") {
   }
   ld = cxx
   is_clang = true
-  sysroot_flags = "-isysroot $mac_sdk_path -mmacosx-version-min=$mac_deployment_target"
+  sysroot_flags = "-isysroot $mac_sdk_path -mtvos-version-min=$mac_deployment_target"
 }
 
 # Toolchain used for Mac ARM64 host targets.
@@ -306,5 +306,5 @@ mac_toolchain("clang_arm64") {
   }
   ld = cxx
   is_clang = true
-  sysroot_flags = "-isysroot $mac_sdk_path -mmacosx-version-min=$mac_deployment_target"
+  sysroot_flags = "-isysroot $mac_sdk_path -mtvos-version-min=$mac_deployment_target"
 }
